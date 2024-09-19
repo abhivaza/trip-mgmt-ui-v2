@@ -22,36 +22,30 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
-import { useAuth } from "@/common/context/AuthContext";
 
 const popularDestinations = [
   {
     id: 1,
     name: "Paris",
-    image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80",
+    image: "/images/paris.png",
     description: "City of Love",
   },
   {
     id: 2,
     name: "Tokyo",
-    image:
-      "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=600&q=80",
+    image: "/images/paris.png",
     description: "Blend of tradition and modernity",
   },
   {
     id: 3,
     name: "New York",
-    image:
-      "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?auto=format&fit=crop&w=600&q=80",
+    image: "/images/paris.png",
     description: "The Big Apple",
   },
   {
     id: 4,
     name: "Bali",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80",
+    image: "/images/paris.png",
     description: "Island paradise",
   },
 ];
@@ -126,7 +120,7 @@ export default function LandingPage() {
         {/* Hero Section */}
         <section className="relative h-[70vh] flex items-center justify-center">
           <Image
-            src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80"
+            src="/images/paris.png"
             alt="Beautiful travel destination"
             layout="fill"
             objectFit="cover"
@@ -151,10 +145,7 @@ export default function LandingPage() {
                   onChange={(e) => setSearchTerm(e.target.value)}
                 />
               </div>
-              <Button
-                className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3"
-                onClick={() => router.push("/home/trip-plan")}
-              >
+              <Button className="mt-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3">
                 Plan My Trip
               </Button>
             </div>
